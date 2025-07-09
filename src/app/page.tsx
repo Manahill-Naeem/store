@@ -1,5 +1,11 @@
 // src/app/page.tsx
 import Link from 'next/link';
+import Image from 'next/image'; // <-- Add this line for Image component
+
+export const metadata = { // <-- Add metadata here for the Home page
+  title: 'Home - Mobile Accessories Store',
+  description: 'Your one-stop shop for high-quality mobile accessories, chargers, cases, and more.',
+};
 
 export default function Home() {
   return (
@@ -30,19 +36,40 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* These are placeholder divs for now. We will replace them with actual ProductCard components later. */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/200x200?text=Accessory+1" alt="Accessory 1" className="mx-auto mb-4 rounded-lg"/>
+            {/* CHANGED: Replaced <img> with <Image /> */}
+            <Image
+              src="https://via.placeholder.com/200x200?text=Accessory+1"
+              alt="Accessory 1"
+              width={200} // Set explicit width
+              height={200} // Set explicit height
+              className="mx-auto mb-4 rounded-lg"
+            />
             <h3 className="text-xl font-semibold mb-2">Wireless Earbuds</h3>
             <p className="text-gray-600 mb-3">$49.99</p>
             <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">View Product</button>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/200x200?text=Accessory+2" alt="Accessory 2" className="mx-auto mb-4 rounded-lg"/>
+            {/* CHANGED: Replaced <img> with <Image /> */}
+            <Image
+              src="https://via.placeholder.com/200x200?text=Accessory+2"
+              alt="Accessory 2"
+              width={200} // Set explicit width
+              height={200} // Set explicit height
+              className="mx-auto mb-4 rounded-lg"
+            />
             <h3 className="text-xl font-semibold mb-2">Fast Charger (65W)</h3>
             <p className="text-gray-600 mb-3">$29.99</p>
             <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">View Product</button>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="https://via.placeholder.com/200x200?text=Accessory+3" alt="Accessory 3" className="mx-auto mb-4 rounded-lg"/>
+            {/* CHANGED: Replaced <img> with <Image /> */}
+            <Image
+              src="https://via.placeholder.com/200x200?text=Accessory+3"
+              alt="Accessory 3"
+              width={200} // Set explicit width
+              height={200} // Set explicit height
+              className="mx-auto mb-4 rounded-lg"
+            />
             <h3 className="text-xl font-semibold mb-2">Durable Phone Case</h3>
             <p className="text-gray-600 mb-3">$15.99</p>
             <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">View Product</button>
