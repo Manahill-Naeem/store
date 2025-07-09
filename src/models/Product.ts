@@ -1,8 +1,8 @@
 // src/models/Product.ts
-import mongoose, { Schema } from 'mongoose'; // Make sure 'Document' is NOT imported from mongoose if not directly used elsewhere in this file
+import mongoose, { Document, Schema } from 'mongoose';
 
-export interface IProduct { // <-- THIS IS THE KEY CHANGE: NO "extends Document"
-  _id: string; // This MUST be 'string'
+export interface IProduct extends Document { // Still extend Document for Mongoose methods
+  _id: string; // <-- Make sure this is explicitly 'string'
   name: string;
   description: string;
   price: number;
@@ -10,8 +10,8 @@ export interface IProduct { // <-- THIS IS THE KEY CHANGE: NO "extends Document"
   category: string;
   rating: number;
   reviews: number;
-  createdAt?: Date; // Optional, as these are auto-generated
-  updatedAt?: Date; // Optional
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 const ProductSchema: Schema = new Schema(
@@ -29,8 +29,6 @@ const ProductSchema: Schema = new Schema(
   }
 );
 
-// When retrieving from Mongoose, the _id will implicitly be converted to string for JSON.
-// The model itself uses IProduct as its base type.
 const Product = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);
 
 export default Product;
