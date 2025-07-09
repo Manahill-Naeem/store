@@ -4,15 +4,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Currency Converter - Mobile Store',
-  description: 'Convert prices between different currencies instantly.',
-};
+// NOTE: The 'metadata' export has been moved to src/app/currency-converter/layout.tsx
 
 export default function CurrencyConverterPage() {
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('PKR'); // Pakistan Rupees
+  const [toCurrency, setToCurrency] = useState('PKR');
   const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -77,7 +74,7 @@ export default function CurrencyConverterPage() {
           </div>
 
           <div className="flex items-center justify-center mt-6 sm:mt-0">
-            <span className="text-3xl font-bold text-gray-600">&harr;</span> {/* Bi-directional arrow */}
+            <span className="text-3xl font-bold text-gray-600">&harr;</span>
           </div>
 
           <div className="flex-1">
