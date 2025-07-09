@@ -14,10 +14,10 @@ export default function AboutPage() {
       <section className="bg-white p-8 rounded-lg shadow-md mb-8">
         <h2 className="text-3xl font-semibold text-blue-700 mb-4">Our Story</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Welcome to Mobile Store, your one-stop shop for premium mobile accessories. We started with a simple vision: to provide high-quality, durable, and stylish accessories that complement your mobile lifestyle. In today's fast-paced world, your mobile device is more than just a phone; it's a companion, a tool, and a window to the world. We believe it deserves the best protection and enhancement.
+          Welcome to Mobile Store, your one-stop shop for premium mobile accessories. We started with a simple vision: to provide high-quality, durable, and stylish accessories that complement your mobile lifestyle. In today&apos;s fast-paced world, your mobile device is more than just a phone; it&apos;s a companion, a tool, and a window to the world. We believe it deserves the best protection and enhancement.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          From our humble beginnings, we've grown into a trusted online retailer, thanks to our commitment to customer satisfaction and a curated selection of products. Every item in our store is hand-picked and tested to ensure it meets our rigorous standards of quality and performance.
+          From our humble beginnings, we&apos;ve grown into a trusted online retailer, thanks to our commitment to customer satisfaction and a curated selection of products. Every item in our store is hand-picked and tested to ensure it meets our rigorous standards of quality and performance.
         </p>
       </section>
 
